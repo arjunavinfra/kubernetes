@@ -1,0 +1,8 @@
+#!/bin/bash 
+istioctl init operator 
+istioctl apply -f profile.yaml
+kubectl get iop -A 
+kubectl get po -n istio-system
+kubectl label ns default istio-injection=enabled
+kubectl get ns -L istio-injection 
+
