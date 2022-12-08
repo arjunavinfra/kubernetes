@@ -1,6 +1,6 @@
 #!/bin/bash 
-istioctl init operator 
-istioctl apply -f profile.yaml
+istioctl operator init  
+istioctl apply -f profile.yaml -y
 kubectl get iop -A 
 kubectl get po -n istio-system
 kubectl label ns default istio-injection=enabled

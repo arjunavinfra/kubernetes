@@ -5,8 +5,6 @@ metadata:
 spec:
   hosts:
     - 'customers.default.svc.cluster.local'
-  gateways:
-    - gateway
   http:
     - route:
         - destination:
