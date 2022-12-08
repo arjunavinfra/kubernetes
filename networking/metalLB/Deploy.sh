@@ -18,6 +18,6 @@ echo -n " "
 echo -e "\n 🔹Assigning IP Address   ⛽"
 echo -n " "
 
-cat IPassign.yaml | sed "s|IPADDR|$network|g" | kubectl apply -f 
+cat IPassign.yaml | sed "s|IPADDR|$network|g" | kubectl apply -f -
 
 echo ""
