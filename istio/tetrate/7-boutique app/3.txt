@@ -1,0 +1,5 @@
+#delete the exisisign front 
+
+create new app version origial and v1 
+create virtual service with weight 
+create dr

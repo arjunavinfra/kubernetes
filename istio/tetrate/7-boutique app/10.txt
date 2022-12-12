@@ -1,0 +1,9 @@
+Edit the product catalog service deployment by running kubectl edit deploy productcatalogservice. This opens an editor. Scroll to the section with the environment variables and add the EXTRA_LATENCY environment variable:
+
+...
+    spec:
+      containers:
+      - env:
+        - name: EXTRA_LATENCY
+          value: 6s
+...
