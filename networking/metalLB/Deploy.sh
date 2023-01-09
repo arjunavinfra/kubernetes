@@ -6,10 +6,10 @@ echo -n " "
 echo -e"\n 🔹Waithing the pod to be in ready state   ⏳"
 echo -n " "
 
-# kubectl wait --namespace metallb-system \
-#                 --for=condition=ready pod \
-#                 --selector=app=metallb \
-#                 --timeout=90s
+kubectl wait --namespace metallb-system \
+                --for=condition=ready pod \
+                -l component=controller \
+                --timeout=90s
                 
 docker network inspect -f '{{.IPAM.Config}}' kind > /dev/null
 
