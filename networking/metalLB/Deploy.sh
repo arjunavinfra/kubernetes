@@ -21,3 +21,4 @@ echo -n " "
 cat IPassign.yaml | sed "s|IPADDR|$network|g" | kubectl apply -f -
 
 echo ""
+
